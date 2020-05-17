@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/question"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlue"
+        android:orientation="vertical"
+        android:id="@+id/LinearLayout1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/question"
+            android:background="@drawable/category_bg"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:text="What is your name?"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5/10"
+            android:gravity="center"
+            android:padding="16dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/button1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout1">
+        <Button
+           android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/btn1"
+            android:text="Option1"
+            android:stateListAnimator="@null"
+            android:background="@drawable/rounded_borders"
+            android:backgroundTint="@color/colorBlue"
+            android:layout_margin="8dp"/>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:stateListAnimator="@null"
+            android:id="@+id/btn2"
+            android:text="Option2"
+            android:background="@drawable/rounded_borders"
+            android:backgroundTint="@color/colorBlue"
+            android:layout_margin="8dp"/>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/btn3"
+            android:text="Option3"
+            android:stateListAnimator="@null"
+            android:background="@drawable/rounded_borders"
+            android:backgroundTint="@color/colorBlue"
+            android:layout_margin="8dp"/>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/btn4"
+            android:text="Option4"
+            android:stateListAnimator="@null"
+            android:background="@drawable/rounded_borders"
+            android:backgroundTint="@color/colorBlue"
+            android:layout_margin="8dp"/>
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn5"
+        android:stateListAnimator="@null"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@+id/btn6"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout2"
+        android:background="@drawable/rounded_corners"
+        android:text="@string/sharebtn"
+        android:backgroundTint="@color/colorBlue"/>
+    <Button
+        android:id="@+id/btn6"
+        android:stateListAnimator="@null"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn5"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout2"
+        android:background="@drawable/rounded_corners"
+        android:text="@string/nextbtn"
+        android:backgroundTint="@color/colorBlue"/>
+
+   <!-- <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_marginEnd="16dp"
+        android:translationY="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/LinearLayout1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/bookmark_border"
+        tools:ignore="MissingConstraints" />
+-->
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
