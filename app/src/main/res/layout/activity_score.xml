@@ -11,7 +11,7 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="330dp"
-        android:background="@color/colorGreen"
+        android:background="@color/colorBlue"
         app:layout_constraintBottom_toTopOf="@id/constraintLayout2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -77,11 +77,11 @@
         app:layout_constraintVertical_bias="0.0">
 
         <Button
-            android:text="done_btn"
+            android:text="DONE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/buttonshape"
-            android:id="@+id/signin_btn"
+            android:id="@+id/done_btn"
             android:layout_marginStart="16dp"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"

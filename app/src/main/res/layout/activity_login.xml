@@ -7,6 +7,16 @@
     android:layout_height="match_parent"
     >
 
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:src="@drawable/pucit"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -71,7 +81,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginRight="16dp"
         android:layout_marginStart="16dp"
-        android:textColor="@color/colorGreen"
+        android:textColor="@color/colorBlue"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="480dp"
