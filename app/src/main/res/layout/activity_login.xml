@@ -23,7 +23,7 @@
         android:hint="Email"
         android:inputType="textPersonName"
         android:padding="12dp"
-        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:drawableLeft="@drawable/ic_email"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
