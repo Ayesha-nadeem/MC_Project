@@ -26,6 +26,7 @@ public class Login extends AppCompatActivity {
         password=findViewById(R.id.password);
         email=findViewById(R.id.email);
        login_btn=findViewById(R.id.login_btn);
+        db_sqlite = new database_sqlite(this);
 
         clickHere.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,8 +44,8 @@ public class Login extends AppCompatActivity {
                     String Email = email.getText().toString();
                     String Password = password.getText().toString();
                     Boolean isValidLogin=db_sqlite.isValidUser(Email,Password);
-                    if(isValidLogin)
-                    {
+
+                    if (isValidLogin) {
                         Toast toast = Toast.makeText(getApplicationContext(),
                                 "Successfully logged in",
                                 Toast.LENGTH_SHORT);
@@ -52,6 +53,7 @@ public class Login extends AppCompatActivity {
                         toast.show();
                         Intent intent = new Intent(Login.this,MainActivity.class);
                         startActivity(intent);
+
 
                     }
                     else
@@ -61,8 +63,9 @@ public class Login extends AppCompatActivity {
                                 Toast.LENGTH_SHORT);
 
                         toast.show();
-                        return;
+
                     }
+
 
 
                 }
@@ -75,7 +78,7 @@ public class Login extends AppCompatActivity {
         String Email = email.getText().toString();
 
         String Password = password.getText().toString();
-        if ( Password.isEmpty() ||Email.isEmpty()) {
+        if ( Password==null ||Email==null) {
 
             Toast toast = Toast.makeText(getApplicationContext(),
                     "Please fill both of the fields",
