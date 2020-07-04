@@ -49,11 +49,11 @@ public class signup extends AppCompatActivity {
                     String Email = email.getText().toString();
                     String Password = password.getText().toString();
                     ContentValues values = new ContentValues();
-                    values.put("user_name",user_name );
-                    values.put("user_email", Email);
-                    values.put("user_pass", Password);
+                    values.put("username",user_name );
+                    values.put("email", Email);
+                    values.put("password", Password);
 
-                    long rowNumber=db_sqlite.getWritableDatabase().insert("users_table", null, values);
+                    long rowNumber=db_sqlite.getWritableDatabase().insert("users", null, values);
                     if(rowNumber==-1)
                     {
                         Toast toast = Toast.makeText(getApplicationContext(),
