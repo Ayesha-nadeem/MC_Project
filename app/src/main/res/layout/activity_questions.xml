@@ -74,12 +74,14 @@
             android:layout_width="match_parent"
             android:id="@+id/btn1"
             android:text="Option1"
+            android:textColor="@android:color/black"
             android:stateListAnimator="@null"
             android:background="@drawable/rounded_borders"
             android:backgroundTint="@color/colorBlue"
             android:layout_margin="8dp"/>
         <Button
             android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
             android:layout_width="match_parent"
             android:stateListAnimator="@null"
             android:id="@+id/btn2"
@@ -90,6 +92,7 @@
         <Button
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:textColor="@android:color/black"
             android:id="@+id/btn3"
             android:text="Option3"
             android:stateListAnimator="@null"
@@ -99,6 +102,7 @@
         <Button
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:textColor="@android:color/black"
             android:id="@+id/btn4"
             android:text="Option4"
             android:stateListAnimator="@null"
@@ -127,6 +131,8 @@
         android:id="@+id/btn6"
         android:stateListAnimator="@null"
         android:layout_width="0dp"
+        android:enabled="false"
+        android:alpha="0.7"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
