@@ -16,16 +16,14 @@ import java.util.List;
 
 public class database_sqlite extends SQLiteOpenHelper {
 
-    Context context;
-
     public database_sqlite(Context context) {
-        super(context,  "interviewPrep.db", null, 1);
-        this.context=context;
+        super(context,  "interviewPrep", null, 1);
+
     }
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("create table users(id INTEGER primary key Autoincrement,username TEXT,email TEXT,password TEXT)");
-        sqLiteDatabase.execSQL("create table categories(id INTEGER primary key Autoincrement,categoryname TEXT)");
+        sqLiteDatabase.execSQL("create table categories(id INTEGER primary key Autoincrement,name TEXT)");
     }
 
     @Override
@@ -38,7 +36,7 @@ public class database_sqlite extends SQLiteOpenHelper {
     {
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
-        cv.put("categoryname",category_name);
+        cv.put("name",category_name);
         long s=db.insert( "categories",null,cv);
         return s;
     }
