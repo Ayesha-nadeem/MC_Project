@@ -38,7 +38,7 @@ public class database_sqlite extends SQLiteOpenHelper {
     {
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
-        cv.put("category_name",category_name);
+        cv.put("categoryname",category_name);
         long s=db.insert( "categories",null,cv);
         return s;
     }
