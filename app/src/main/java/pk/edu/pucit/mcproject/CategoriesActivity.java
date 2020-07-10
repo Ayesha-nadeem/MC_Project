@@ -42,10 +42,10 @@ public class CategoriesActivity extends AppCompatActivity {
 //        list.add(new CategoryModel("","category1"));
 //
         db_sqlite = new database_sqlite(this);
-        long s=db_sqlite.insert_category("Architecture and organization");
-        Toast toast = Toast.makeText(getApplicationContext(),
-                s+"",
-                Toast.LENGTH_SHORT);
+        //long s=db_sqlite.insert_category("Architecture and organization");
+//        Toast toast = Toast.makeText(getApplicationContext(),
+//                s+"",
+//                Toast.LENGTH_SHORT);
 
 
         list=db_sqlite.getCategories();
