@@ -3,6 +3,7 @@ package pk.edu.pucit.mcproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.Animator;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -38,11 +39,11 @@ public class Questions extends AppCompatActivity {
         nextBtn=findViewById(R.id.btn6);
 
         list=new ArrayList<>();
-        list.add(new QuestionModel("a","b","c","d","a","question 1"));
-        list.add(new QuestionModel("a","b","c","d","d","question 2"));
-        list.add(new QuestionModel("a","b","c","d","b","question 3"));
-        list.add(new QuestionModel("a","b","c","d","a","question 4"));
-        list.add(new QuestionModel("a","b","c","d","c","question 5"));
+        list.add(new QuestionModel("anzala","saira","ayesha","none","anzala","What is your name?"));
+        list.add(new QuestionModel("1990","1996","1999","1998","1998","Date of birth"));
+        list.add(new QuestionModel("20","21","22","23","21","age?"));
+        list.add(new QuestionModel("reading","gardening","music","dancing","reading","hobby?"));
+        list.add(new QuestionModel("happy","sad","excited","tense","happy","mood?"));
         for(int i=0;i<4;i++){
             optionsContainer.getChildAt(i).setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -63,7 +64,11 @@ public class Questions extends AppCompatActivity {
                 enableOption(true);
                 position++;
                 if(position==list.size()){
-                    //score activity
+                    Intent scoreIntent=new Intent(Questions.this,Score.class);
+                    scoreIntent.putExtra("score",score);
+                    scoreIntent.putExtra("total",list.size());
+                    startActivity(scoreIntent);
+                    finish();
                     return;
                 }
                 count=0;
