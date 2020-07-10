@@ -17,13 +17,36 @@ import java.util.List;
 public class database_sqlite extends SQLiteOpenHelper {
 
     public database_sqlite(Context context) {
-        super(context,  "interviewPrep", null, 1);
+        super(context,  "interviewPrep1", null, 1);
 
     }
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("create table users(id INTEGER primary key Autoincrement,username TEXT,email TEXT,password TEXT)");
         sqLiteDatabase.execSQL("create table categories(id INTEGER primary key Autoincrement,name TEXT)");
+        ContentValues cv1=new ContentValues();
+        cv1.put("name","computer architecture");
+        sqLiteDatabase.insert( "categories",null,cv1);
+
+        ContentValues cv2=new ContentValues();
+        cv2.put("name","Graphics and visual computing");
+        sqLiteDatabase.insert( "categories",null,cv2);
+
+        ContentValues cv3=new ContentValues();
+        cv3.put("name","data science");
+        sqLiteDatabase.insert( "categories",null,cv3);
+
+        ContentValues cv4=new ContentValues();
+        cv4.put("name","Algorithms and complexity");
+        sqLiteDatabase.insert( "categories",null,cv4);
+
+        ContentValues cv5=new ContentValues();
+        cv5.put("name","networking and communication");
+        sqLiteDatabase.insert( "categories",null,cv5);
+
+        ContentValues cv6=new ContentValues();
+        cv6.put("name","web development");
+        sqLiteDatabase.insert( "categories",null,cv6);
     }
 
     @Override
