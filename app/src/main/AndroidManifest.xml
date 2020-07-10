@@ -13,10 +13,10 @@
         <activity android:name=".Score" />
         <activity android:name=".MainActivity" />
         <activity android:name=".signup" />
-        <activity android:name=".Questions" />
-        <activity android:name=".Login" />
         <activity android:name=".Splash" />
-        <activity android:name=".CategoriesActivity">
+        <activity android:name=".Login" />
+        <activity android:name=".CategoriesActivity" />
+        <activity android:name=".Questions">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
