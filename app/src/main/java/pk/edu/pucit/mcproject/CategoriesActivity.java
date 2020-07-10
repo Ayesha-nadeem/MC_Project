@@ -46,6 +46,7 @@ public class CategoriesActivity extends AppCompatActivity {
         Toast toast = Toast.makeText(getApplicationContext(),
                 s+"",
                 Toast.LENGTH_SHORT);
+
         list=db_sqlite.getCategories();
         CategoryAdapter adapter = new CategoryAdapter(this,list);
         recyclerView.setAdapter(adapter);
