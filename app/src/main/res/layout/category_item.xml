@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/category_background"
     android:layout_margin="4dp"
+    android:id="@+id/LinearLayout1"
 
     >
 
@@ -25,5 +26,8 @@
         android:textStyle="bold"
         android:textSize="18sp"
         android:gravity="center_vertical"
-        android:padding="8dp"/>
+        android:padding="8dp"
+        android:hint="0"
+        />
+
 </LinearLayout>

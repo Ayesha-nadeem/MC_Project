@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -43,6 +45,18 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
 
         String s=categoryModelList.get(position).getTitle();
         holder.title.setText(categoryModelList.get(position).getTitle());
+        int i=categoryModelList.get(position).getId();
+        holder.title.setHint(categoryModelList.get(position).getId()+"");
+        holder.title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView tv=(TextView)v;
+                String s= (String) tv.getHint();
+                Intent intent = new Intent(context, Questions.class);
+                intent.putExtra("CategoryId", s);
+                context.startActivity(intent);
+            }
+        });
         Log.e("title at pos "+position, categoryModelList.get(position).getTitle() );
        // holder.setData(categoryModelList.get(position).getImageUrl(),categoryModelList.get(position).getTitle());
 

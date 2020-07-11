@@ -73,7 +73,7 @@ public class database_sqlite extends SQLiteOpenHelper {
                Integer id= cursor.getInt(0);
                 String category_name= cursor.getString(1);
 
-                list.add(new CategoryModel("", category_name));
+                list.add(new CategoryModel("", category_name,id));
             }while (cursor.moveToNext());
         }
         cursor.close();
