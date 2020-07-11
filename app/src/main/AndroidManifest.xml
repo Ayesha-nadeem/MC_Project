@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="pk.edu.pucit.mcproject">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,8 +16,8 @@
         <activity android:name=".signup" />
         <activity android:name=".Splash" />
         <activity android:name=".Login" />
-        <activity android:name=".CategoriesActivity" />
-        <activity android:name=".Questions">
+        <activity android:name=".Questions" />
+        <activity android:name=".CategoriesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

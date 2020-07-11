@@ -41,9 +41,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-        Picasso.with(context).load("https://raw.githubusercontent.com/revolunet/PythonBooks/master/img/runestone.png").into(holder.imageView);
-
-        String s=categoryModelList.get(position).getTitle();
+        String url=categoryModelList.get(position).getImageUrl();
+        Picasso.with(context).load(categoryModelList.get(position).getImageUrl()).into(holder.imageView);
         holder.title.setText(categoryModelList.get(position).getTitle());
         int i=categoryModelList.get(position).getId();
         holder.title.setHint(categoryModelList.get(position).getId()+"");
@@ -68,7 +67,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-       public CircleImageView imageView;
+       public ImageView imageView;
         public TextView title;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

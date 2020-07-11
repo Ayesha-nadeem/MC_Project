@@ -23,31 +23,37 @@ public class database_sqlite extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("create table users(id INTEGER primary key Autoincrement,username TEXT,email TEXT,password TEXT)");
-        sqLiteDatabase.execSQL("create table categories(id INTEGER primary key Autoincrement,name TEXT)");
+        sqLiteDatabase.execSQL("create table categories(id INTEGER primary key Autoincrement,name TEXT,url TEXT)");
         sqLiteDatabase.execSQL("create table questions(id INTEGER primary key Autoincrement,question TEXT,A TEXT,B TEXT,C TEXT,D TEXT,correctOption TEXT,categoryId INTEGER)");
 
         ContentValues cv1=new ContentValues();
         cv1.put("name","Computer Architecture");
+        cv1.put("url","https://i.imgur.com/F57jwzB.jpg");
         sqLiteDatabase.insert( "categories",null,cv1);
 
         ContentValues cv2=new ContentValues();
         cv2.put("name","Graphics and Visual computing");
+        cv2.put("url","https://i.imgur.com/kgKz0LS.jpg");
         sqLiteDatabase.insert( "categories",null,cv2);
 
         ContentValues cv3=new ContentValues();
         cv3.put("name","Data Science");
+        cv3.put("url","https://i.imgur.com/SkPbq.jpg");
         sqLiteDatabase.insert( "categories",null,cv3);
 
         ContentValues cv4=new ContentValues();
         cv4.put("name","Algorithms and Complexity");
+        cv4.put("url","https://i.imgur.com/k7JCpSg.jpg");
         sqLiteDatabase.insert( "categories",null,cv4);
 
         ContentValues cv5=new ContentValues();
         cv5.put("name","Networking and Communication");
+        cv5.put("url","https://i.imgur.com/rLqpSjt.jpg");
         sqLiteDatabase.insert( "categories",null,cv5);
 
         ContentValues cv6=new ContentValues();
-        cv6.put("name","web development");
+        cv6.put("name","Web Development");
+        cv6.put("url","https://i.imgur.com/l7KBzNq.jpg");
         sqLiteDatabase.insert( "categories",null,cv6);
 
         ContentValues v1=new ContentValues();
@@ -115,12 +121,12 @@ public class database_sqlite extends SQLiteOpenHelper {
         v7.put("categoryID","2");
         sqLiteDatabase.insert( "categories",null,v7);
         ContentValues v8=new ContentValues();
-        v8.put("question","");
-        v8.put("A","");
-        v8.put("B","");
-        v8.put("C","");
-        v8.put("D","");
-        v8.put("correctOption","");
+        v8.put("question","The Quantity Of An Image Depend On");
+        v8.put("A","No. Of Pixel Used By Image");
+        v8.put("B","No. Of Line Used By Image");
+        v8.put("C","No. Of Resolution Used By Image");
+        v8.put("D","None");
+        v8.put("correctOption","No. Of Pixel Used By Image");
         v8.put("categoryID","2");
         sqLiteDatabase.insert( "categories",null,v8);
         ContentValues v9=new ContentValues();
@@ -213,8 +219,8 @@ public class database_sqlite extends SQLiteOpenHelper {
             do{
                Integer id= cursor.getInt(0);
                 String category_name= cursor.getString(1);
-
-                list.add(new CategoryModel("", category_name,id));
+                String url=cursor.getString(2);
+                list.add(new CategoryModel(url, category_name,id));
             }while (cursor.moveToNext());
         }
         cursor.close();

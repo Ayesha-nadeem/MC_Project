@@ -6,15 +6,21 @@
     android:layout_height="wrap_content"
     android:background="@drawable/category_background"
     android:layout_margin="4dp"
-    android:id="@+id/LinearLayout1"
+    android:id="@+id/LinearLayout1">
 
-    >
-
-    <de.hdodenhof.circleimageview.CircleImageView
+<!--    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--        android:layout_width="70dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:id="@+id/image_view"-->
+<!--        android:src="@color/colorBlue"/>-->
+    <ImageView
+        android:id="@+id/image_view"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:id="@+id/image_view"
-        android:src="@color/colorBlue"/>
+        android:padding="5dp"
+
+
+        />
 
     <TextView
         android:id="@+id/title"
