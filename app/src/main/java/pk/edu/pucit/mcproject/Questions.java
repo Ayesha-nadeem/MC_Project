@@ -22,9 +22,10 @@ public class Questions extends AppCompatActivity {
     private LinearLayout optionsContainer;
     private Button shareBtn,nextBtn;
     private int count=0;
-    private List<QuestionModel> list;
+    private List<QuestionModel> list=new ArrayList<>();
     private int position =0;
     private int score=0;
+    database_sqlite db_sqlite;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,13 +38,18 @@ public class Questions extends AppCompatActivity {
         optionsContainer=findViewById(R.id.LinearLayout2);
         shareBtn=findViewById(R.id.btn5);
         nextBtn=findViewById(R.id.btn6);
+        Intent intent = getIntent();
+        String CategoryId = intent.getStringExtra("CategoryId");
 
-        list=new ArrayList<>();
-        list.add(new QuestionModel("anzala","saira","ayesha","none","anzala","What is your name?"));
-        list.add(new QuestionModel("1990","1996","1999","1998","1998","Date of birth"));
-        list.add(new QuestionModel("20","21","22","23","21","age?"));
-        list.add(new QuestionModel("reading","gardening","music","dancing","reading","hobby?"));
-        list.add(new QuestionModel("happy","sad","excited","tense","happy","mood?"));
+        db_sqlite = new database_sqlite(this);
+        list=db_sqlite.getQuestions(CategoryId);
+int x=0;
+//        list=new ArrayList<>();
+//        list.add(new QuestionModel("anzala","saira","ayesha","none","anzala","What is your name?"));
+//        list.add(new QuestionModel("1990","1996","1999","1998","1998","Date of birth"));
+//        list.add(new QuestionModel("20","21","22","23","21","age?"));
+//        list.add(new QuestionModel("reading","gardening","music","dancing","reading","hobby?"));
+//        list.add(new QuestionModel("happy","sad","excited","tense","happy","mood?"));
         for(int i=0;i<4;i++){
             optionsContainer.getChildAt(i).setOnClickListener(new View.OnClickListener() {
                 @Override

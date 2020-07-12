@@ -1,39 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:padding="16dp"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/category_background"
-    android:layout_margin="4dp"
-    android:id="@+id/LinearLayout1">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="6dp"
+        android:background="@drawable/category_background">
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="70dp"
+            android:layout_height="90dp"
+            android:padding="5dp"
 
-<!--    <de.hdodenhof.circleimageview.CircleImageView-->
-<!--        android:layout_width="70dp"-->
-<!--        android:layout_height="70dp"-->
-<!--        android:id="@+id/image_view"-->
-<!--        android:src="@color/colorBlue"/>-->
-    <ImageView
-        android:id="@+id/image_view"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:padding="5dp"
 
+            tools:srcCompat="@tools:sample/avatars"/>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="5dp">
 
-        />
-
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:text="Title"
-        android:layout_marginStart="8dp"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:gravity="center_vertical"
-        android:padding="8dp"
-        android:hint="0"
-        />
-
-</LinearLayout>
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               android:paddingLeft="8dp"
+                android:paddingTop="18dp"
+                android:paddingRight="18dp"
+                android:text="title!"
+                android:textStyle="bold|italic"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>
