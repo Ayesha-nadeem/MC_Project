@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MCProject</string>
+    <string name="app_name">Interview App</string>
     <string name="sharebtn">SHARE</string>
     <string name="nextbtn">NEXT</string>
     <string name="question">QUESTIONS</string>
