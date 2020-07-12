@@ -12,6 +12,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.Toolbar;
 
 import java.util.ArrayList;
@@ -33,24 +34,31 @@ public class Questions extends AppCompatActivity {
         setContentView(R.layout.activity_questions);
         //Toolbar toolbar=findViewById(R.id.toolbar);
        // setSupportActionBar(toolbar);
+
+
+
         question=findViewById(R.id.question);
         noIndicator=findViewById(R.id.button1);
         optionsContainer=findViewById(R.id.LinearLayout2);
         shareBtn=findViewById(R.id.btn5);
         nextBtn=findViewById(R.id.btn6);
+
         Intent intent = getIntent();
         String CategoryId = intent.getStringExtra("CategoryId");
 
         db_sqlite = new database_sqlite(this);
         list=db_sqlite.getQuestions(CategoryId);
 int x=0;
-//        list=new ArrayList<>();
-//        list.add(new QuestionModel("anzala","saira","ayesha","none","anzala","What is your name?"));
-//        list.add(new QuestionModel("1990","1996","1999","1998","1998","Date of birth"));
-//        list.add(new QuestionModel("20","21","22","23","21","age?"));
-//        list.add(new QuestionModel("reading","gardening","music","dancing","reading","hobby?"));
-//        list.add(new QuestionModel("happy","sad","excited","tense","happy","mood?"));
-        for(int i=0;i<4;i++){
+
+
+//       list=new ArrayList<>();
+ //      list.add(new QuestionModel("anzala","saira","ayesha","none","anzala","What is your name?"));
+ //      list.add(new QuestionModel("1990","1996","1999","1998","1998","Date of birth"));
+ //      list.add(new QuestionModel("20","21","22","23","21","age?"));
+ //      list.add(new QuestionModel("reading","gardening","music","dancing","reading","hobby?"));
+//       list.add(new QuestionModel("happy","sad","excited","tense","happy","mood?"));
+          for(int i=0;i<4;i++){
+
             optionsContainer.getChildAt(i).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

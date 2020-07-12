@@ -10,6 +10,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -365,6 +367,9 @@ public class database_sqlite extends SQLiteOpenHelper {
         cursor.close();
         return list;
     }
+
+
+
     public Boolean isValidUser(String email,String pass)
     {
         SQLiteDatabase db=this.getReadableDatabase();
